@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>
+  <body ng-app="chatApp">
+    <div id="m" ng-controller="chatCtrl">
+      <div class="header" ng-show="hideMe">
+        <div class="name">{{firstName}}</div>
+      </div>  
+      
+    <form ng-submit="getName(firstName)" ng-hide="hideMe" action="#" class="myForm">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input type="text" ng-model="firstName" id="name" class="mdl-textfield__input">
+        <label class="mdl-textfield__label" for="sample3">Enter your name...</label>
+      </div>
+      <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+    </form>
+    
+    <div>
+      <div class="userWin" ng-show="hideMe">
+      <ul id="user-list">  
+      </ul>
+      </div>
+      <div class="chatWin" ng-show="hideMe">5</div>
+      <input type="text" ng-model="myMessage" class="messageWin mdl-textfield__input" ng-show="hideMe" ng>
+    </div>
+    
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/chatService.js"></script>
+  </body>
+</html>
