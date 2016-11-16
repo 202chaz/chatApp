@@ -12,12 +12,12 @@
         <div class="name">{{firstName}}</div>
       </div>  
       
-    <form ng-submit="getName(firstName)" ng-hide="hideMe" action="#" class="myForm">
+    <form ng-hide="hideMe" action="#" class="myForm">
       <div class="mdl-textfield mdl-js-textfield">
         <input type="text" ng-model="firstName" id="name" class="mdl-textfield__input">
         <label class="mdl-textfield__label" for="sample3">Enter your name...</label>
       </div>
-      <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="getName(firstName)">Submit</button>
     </form>
     
     <div>
