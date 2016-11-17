@@ -22,8 +22,9 @@ body {
 .chatWin {
   height:500px;
   width:64%;
-  background-color:#eaeaea;
+  background-color:#ECEFF1;
   float:left;
+  margin-top:63px;
 }
 .list {
   list-style:none;
@@ -31,7 +32,7 @@ body {
 }
 .userWin {
   height:570px;
-  border-right:2px solid #eaeaea;
+  border-right:2px solid #CFD8DC;
   width:35%;
   padding-top:65px;
   float:left;

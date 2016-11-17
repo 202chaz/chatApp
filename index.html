@@ -25,8 +25,9 @@
       <ul id="user-list">  
       </ul>
       </div>
-      <div class="chatWin" ng-show="hideMe">5</div>
-      <input type="text" ng-model="myMessage" class="messageWin mdl-textfield__input" ng-show="hideMe" ng>
+      <div class="chatWin" ng-show="hideMe" id="chat"></div>
+      <input type="text" ng-model="myMessage" class="messageWin mdl-textfield__input" ng-show="hideMe" id="message">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"ng-show="hideMe" ng-click="getMessage(myMessage)">Send Message</button>
     </div>
     
     </div>
