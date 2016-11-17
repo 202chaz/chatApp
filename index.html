@@ -17,7 +17,7 @@
         <input type="text" ng-model="firstName" id="name" class="mdl-textfield__input">
         <label class="mdl-textfield__label" for="sample3">Enter your name...</label>
       </div>
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="getName(firstName)">Submit</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="getName(firstName); curTime();">Submit</button>
     </form>
     
     <div>
@@ -27,7 +27,7 @@
       </div>
       <div class="chatWin" ng-show="hideMe" id="chat"></div>
       <input type="text" ng-model="myMessage" class="messageWin mdl-textfield__input" ng-show="hideMe" id="message">
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"ng-show="hideMe" ng-click="getMessage(myMessage)">Send Message</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"ng-show="hideMe" ng-click="getMessage(myMessage); curTime();">Send Message</button>
     </div>
     
     </div>

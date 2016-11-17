@@ -26,12 +26,41 @@ app.controller("chatCtrl", function($scope, socket) {
   
   
   $scope.getMessage = function(data) {
-    console.log(data);
+    
     socket.emit('send-message', data);
     $('#message').val('');
   }
   socket.on('new-message', function(data) {
-    $('#chat').append('<div class="chatMessage">'+data.msg+'</div>');
+    $('#chat').append('<div class="chatMessage">'+data.msg+'</div><br/ ><div>'+data.user+' '+$scope.time+'</div>');
   });
+  
+  $scope.curTime = function() {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    
+    function gethour(a) {
+      if (a > 12) {
+        return a - 12;
+      }
+    }
+    
+    function addZero(b) {
+      if (b < 10) {
+        b = "0" + b;
+      }
+      return b;
+    }
+    
+    function checkDay(c) {
+      if (c<11) {
+        return 'AM';
+      } else {
+        return 'PM';
+      }
+    }
+    
+    $scope.time = gethour(h)+(':')+addZero(m)+ ' '+checkDay(h);
+  }
   
 });
